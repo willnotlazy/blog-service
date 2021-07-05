@@ -1,0 +1,3 @@
+2021/06/07 16:06:38 {"callers":["/home/luojy/go-programming-tour-book/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid err: [ID为必填字段]","time":1623053198476649013}
+2021/06/07 16:08:03 {"callers":["/home/luojy/go-programming-tour-book/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid err: [ID为必填字段]","time":1623053283522631614}
+2021/06/07 16:14:23 {"callers":["/home/luojy/go-programming-tour-book/blog-service/main.go: 27 main.init.0"],"level":"error","message":"svc.GetTag err: [sql: expected 2 arguments, got 3]","time":1623053663305676833}
