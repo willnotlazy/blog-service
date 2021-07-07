@@ -32,9 +32,10 @@ func AccessLog() gin.HandlerFunc {
 		endTime := time.Now().Unix()
 
 		fields := logger.Fields{
+			"url" : c.Request.URL.String(),
 			"request" : c.Request.PostForm.Encode(),
 			"response" : bodyWriter.body.String(),
 		}
-		global.Logger.WithFields(fields).Infof("access log: method: %s, status_code: %d, begin_time: %d, end_time: %d", c.Request.Method, bodyWriter.Status(), beginTime, endTime)
+		global.Logger.WithFields(fields).Infof(c, "access log: method: %s, status_code: %d, begin_time: %d, end_time: %d", c.Request.Method, bodyWriter.Status(), beginTime, endTime)
 	}
 }

@@ -7,6 +7,7 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"time"
+	otgorm "github.com/eddycjy/opentracing-gorm"
 )
 type Model struct {
 	ID uint32 `gorm:"primary_key" json:"id"`
@@ -42,7 +43,7 @@ func NewDBEngine(databaseSetting *setting.DatabaseSettingS) (*gorm.DB, error) {
 	db.Callback().Delete().Replace("gorm:delete", deleteCallback)
 	db.DB().SetMaxIdleConns(databaseSetting.MaxIdleConns)
 	db.DB().SetMaxOpenConns(databaseSetting.MaxOpenConns)
-
+	otgorm.AddGormCallbacks(db)
 	return db, nil
 }
 
