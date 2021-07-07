@@ -11,7 +11,7 @@ type MethodLimiter struct {
 }
 
 func NewMethodLimiter() LimiterIface {
-	return MethodLimiter{
+	return &MethodLimiter{
 		Limiter: &Limiter{
 			limiterBuckets: make(map[string]*ratelimit.Bucket),
 		},

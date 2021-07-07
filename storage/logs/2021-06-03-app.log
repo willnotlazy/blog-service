@@ -1,1 +1,0 @@
-2021/06/03 16:26:54 {"callers":["/home/luojy/go-programming-tour-book/blog-service/main.go: 27 main.init.0"],"level":"error","message":"app.BindAndValid errs: [Name长度不能超过100个字符,State必须是[0 1]中的一个]","time":1622708814415813350}

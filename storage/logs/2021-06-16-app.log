@@ -1,2 +1,0 @@
-2021/06/16 15:12:04 {"callers":["/home/luojy/go-programming-tour-book/blog-service/main.go: 27 main.init.0"],"level":"error","message":"svc.UploadFile err: [file suffix is not supported.]","time":1623827524259118906}
-2021/06/16 15:32:03 {"callers":["/home/luojy/go-programming-tour-book/blog-service/main.go: 27 main.init.0"],"level":"info","message":"static path [storage/uploads]","time":1623828723301887064}
